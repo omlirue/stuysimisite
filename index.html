@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StuySIMI · Student Volunteers for Community Health</title>
+<meta name="description" content="StuySIMI mobilizes students to support community health fairs that bring accessible, culturally responsive care directly to New York communities.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</head>
+<body>
+<header id="site-header"></header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <img src="assets/img/logo-cropped.png" alt="StuySIMI logo" style="width:220px;margin-bottom:28px">
+      <div class="eyebrow">Students · Community · Health</div>
+      <h1>Bringing care <em>to</em> the community, not the other way around.</h1>
+      <p class="lede">StuySIMI is a student-led team helping run free community health fairs across New York City, with screenings and preventive care at no cost to the people who need them most.</p>
+      <div class="btn-row">
+        <a class="btn" href="health-fairs.html">See our health fairs</a>
+        <a class="btn ghost" data-mail="Collaborating with StuySIMI" href="#">Partner with us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tinted">
+    <div class="container two-col">
+      <div>
+        <div class="eyebrow">Our mission</div>
+        <blockquote class="mission">StuySIMI fosters community engagement for health fairs that support accessible, culturally responsive care for the communities they serve.</blockquote>
+      </div>
+      <div>
+        <p>We're the New York City branch of SIMI, an organization dedicated to clinical, disaster, population, and public health needs. We connect students with the partners, clinics, and neighborhoods that make each fair possible.</p>
+        <p>Students help with outreach before each fair, follow-up calls after, and on-site support when schedules allow. Along the way, they learn how public health actually reaches people.</p>
+        <a href="about.html" class="arrow" style="font-weight:600;text-decoration:none">Our story →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="stats">
+        <div class="stat"><strong id="stat-fairs">–</strong><span>Health fairs, in New York and California</span></div>
+        <div class="stat"><strong id="stat-partners">–</strong><span>Community and health partners</span></div>
+        <div class="stat"><strong id="stat-speakers">–</strong><span>Health + Tech Series speakers so far</span></div>
+        <div class="stat"><strong>$0</strong><span>Cost to attendees for screenings</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="eyebrow">What we do</div>
+      <h2>Projects &amp; opportunities</h2>
+      <div class="grid" style="margin-top:28px">
+        <a class="link-card" href="health-fairs.html">
+          <h3>Health Fairs</h3>
+          <p>Free screenings and preventive care, brought directly into neighborhoods with partners like the SUNY College of Optometry.</p>
+          <span class="arrow">View fairs →</span>
+        </a>
+        <a class="link-card" href="discussions.html">
+          <h3>Community Discussions</h3>
+          <p>The Health + Tech Series: physicians and innovators on serving community health through technology, with cultural care in mind.</p>
+          <span class="arrow">Meet the speakers →</span>
+        </a>
+        <a class="link-card" href="mcassist.html">
+          <h3>MCAssist</h3>
+          <p>A multilingual guide to help New Yorkers understand and enroll in Medicaid. Coming soon.</p>
+          <span class="arrow">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tinted">
+    <div class="container">
+      <div class="eyebrow">Coming up</div>
+      <h2>Upcoming health fairs</h2>
+      <div class="grid two" id="home-fairs" style="margin-top:28px"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta">
+        <h2>Bring this to your school.</h2>
+        <p>We'd love to work with students at other schools across the boroughs. Whether you want to volunteer at a fair, host a discussion, or start your own chapter, reach out.</p>
+        <div class="btn-row">
+          <a class="btn" data-mail="Collaborating with StuySIMI" href="#">Reach out to collaborate</a>
+          <a class="btn ghost" href="resources.html">Resources for schools</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script>document.addEventListener("DOMContentLoaded", () => renderFairs("home-fairs", { upcomingOnly: true }));</script>
+</body>
+</html>

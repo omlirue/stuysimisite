@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCAssist · StuySIMI</title>
+<meta name="description" content="MCAssist: multilingual guidance for Medicaid enrollment and assistance in New York.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</head>
+<body>
+<header id="site-header"></header>
+
+<main>
+  <section class="page-head">
+    <div class="container">
+      <div class="eyebrow">Projects · In development</div>
+      <h1>MCAssist</h1>
+      <p class="lede">Step-by-step guidance, in your language, for New Yorkers enrolling in or getting help with Medicaid.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:24px">
+    <div class="container">
+      <div class="embed-frame">
+        <div class="embed-bar"><i></i><i></i><i></i><span id="embed-label" style="margin-left:6px">MCAssist</span></div>
+        <div id="mcassist-embed"></div>
+      </div>
+      <p class="note" style="margin-top:14px">MCAssist provides general guidance and is not an official government service. For official enrollment, visit NY State of Health or your local Medicaid office.</p>
+    </div>
+  </section>
+
+  <section class="section tinted">
+    <div class="container">
+      <div class="eyebrow">Why MCAssist</div>
+      <h2>Coverage shouldn't depend on paperwork or language</h2>
+      <div class="grid" style="margin-top:28px">
+        <div class="link-card" style="cursor:default"><h3>Multilingual</h3><p>Guidance in the languages New Yorkers speak at home, so families can understand each step.</p></div>
+        <div class="link-card" style="cursor:default"><h3>Step by step</h3><p>Plain-language help with eligibility, documents, and what happens after applying.</p></div>
+        <div class="link-card" style="cursor:default"><h3>Built for fairs</h3><p>A tool students can use at health fairs and follow-up calls to help attendees connect to coverage.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const box = document.getElementById("mcassist-embed");
+  if (SITE.mcassistUrl) {
+    box.innerHTML = `<iframe src="${SITE.mcassistUrl}" title="MCAssist" loading="lazy"></iframe>`;
+    document.getElementById("embed-label").textContent = SITE.mcassistUrl.replace(/^https?:\/\//, "");
+  } else {
+    box.innerHTML = `<div class="coming-soon">
+      <h2>Coming soon</h2>
+      <p class="lede" style="margin:0 auto">We're building MCAssist now. Planned languages:</p>
+      <div class="lang-row">${SITE.mcassistLanguages.map((l) => `<span>${l}</span>`).join("")}</div>
+      <div class="btn-row" style="justify-content:center"><a class="btn" href="mailto:${SITE.contactEmail}?subject=MCAssist">Help us build or test it</a></div>
+    </div>`;
+  }
+});
+</script>
+</body>
+</html>
