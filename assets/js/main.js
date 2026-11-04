@@ -72,7 +72,7 @@ function renderFooter() {
   el.innerHTML = `<div class="container footer-inner">
       <img src="assets/img/logo-cropped.png" alt="StuySIMI">
       <div class="footer-links">${flat.map((n) => `<a href="${n.href}">${n.label}</a>`).join("")}
-        <a href="${mailto("Hello from the StuySIMI website")}">${SITE.contactEmail}</a></div>
+           <a href="${mailto("Hello from the StuySIMI website")}">Contact us</a></div>
       <div>© ${new Date().getFullYear()} StuySIMI · New York City branch of SIMI</div>
     </div>`;
 }
