@@ -120,6 +120,6 @@ const SPEAKERS = [
 /* ---------- TEAM ---------- */
 const TEAM = [
   { name: "Amelie Rhew", role: "Co-founder & Co-president", image: "", bio: "Add a short bio here." },
-  { name: "Nathaniel Rhew", role: "Co-founder & Co-president", image: "", bio: "Add a short bio here." },
-  { name: "Ryan", role: "Vice President", image: "", bio: "Add a short bio here." },
+  { name: "Nate Rhew", role: "Co-founder & Co-president", image: "", bio: "Add a short bio here." },
+  { name: "Ryan Liang", role: "Vice President", image: "", bio: "Add a short bio here." },
 ];
