@@ -12,6 +12,16 @@
 <link rel="stylesheet" href="assets/css/style.css?v=6">
 <script src="assets/js/data.js?v=6" defer></script>
 <script src="assets/js/main.js?v=6" defer></script>
+<style>
+  /* Collaborating schools strip: self-contained so it looks the same regardless of style.css version */
+  .schools-strip { padding: 36px 0 0; }
+  .schools-strip .eyebrow { text-align: center; margin-bottom: 20px; color: #666; }
+  .schools-strip .schools { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 24px 64px; }
+  .schools-strip .school { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; border: 0; padding: 0; background: none; }
+  .schools-strip .school img { height: 80px; width: auto; max-width: 200px; object-fit: contain; background: none; border-radius: 0; }
+  .schools-strip .school figcaption { font-family: "Hanken Grotesk", system-ui, sans-serif; font-size: .72rem; font-weight: 500; letter-spacing: .04em; color: #8a8a8a; text-align: center; line-height: 1.3; }
+  @media (max-width: 600px) { .schools-strip .school img { height: 64px; } .schools-strip .schools { gap: 20px 36px; } }
+</style>
 </head>
 <body>
 <header id="site-header"></header>
@@ -47,7 +57,11 @@
   <section class="schools-strip">
     <div class="container">
       <div class="eyebrow">Collaborating schools</div>
-      <div class="schools" id="schools"></div>
+      <div class="schools">
+        <figure class="school"><img src="assets/img/schools/stuyvesant.png" alt="Stuyvesant High School logo"><figcaption>Stuyvesant High School</figcaption></figure>
+        <figure class="school"><img src="assets/img/schools/dwight.png" alt="Dwight-Englewood School logo"><figcaption>Dwight-Englewood School</figcaption></figure>
+        <figure class="school"><img src="assets/img/schools/harvardwest.png" alt="Harvard-Westlake School logo"><figcaption>Harvard-Westlake School</figcaption></figure>
+      </div>
     </div>
   </section>
 </main>
