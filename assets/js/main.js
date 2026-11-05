@@ -232,7 +232,7 @@ function renderTeam(targetId) {
       <div class="avatar">${m.image ? `<img src="${esc(m.image)}" alt="${esc(m.name)}">` : esc(initials(m.name))}</div>
       <h3>${esc(m.name)}</h3>
       <div class="role">${esc(m.role)}</div>
-      ${m.bio ? `<p class="bio">${esc(m.bio)}</p>` : ""}
+      <p class="bio">${esc(m.bio)}</p>
     </div>`
   ).join("");
 }
@@ -241,10 +241,11 @@ function renderTeam(targetId) {
 function renderSchools(targetId) {
   const el = document.getElementById(targetId);
   if (!el) return;
-  el.innerHTML = SCHOOLS.map((s) =>
-    s.logo
-      ? `<img class="school-logo" src="${esc(s.logo)}" alt="${esc(s.name)}" title="${esc(s.name)}">`
-      : `<span class="school-fallback">${esc(s.name)}</span>`
+  el.innerHTML = SCHOOLS.map(
+    (s) => `<div class="school">
+      <div class="school-logo">${s.logo ? `<img src="${esc(s.logo)}" alt="${esc(s.name)} logo">` : `<span>${esc(s.name.replace(/\b(High|School)\b/g, "").split(/[\s-]+/).filter(Boolean).map((w) => w[0]).join(""))}</span>`}</div>
+      <div><div class="school-name">${esc(s.name)}</div><div class="school-loc">${esc(s.location)}</div></div>
+    </div>`
   ).join("");
 }
 
