@@ -1,3 +1,13 @@
+/* =========================================================
+   StuySIMI — SITE CONTENT
+   This is the one file to edit when you add a fair, a speaker,
+   or a team bio. You don't need to touch any HTML.
+
+   Photos: put image files in assets/img/ and set `image` to the
+   file name, e.g. image: "assets/img/harlem-fair.jpg".
+   Leave `image: ""` to show the decorative placeholder instead.
+   ========================================================= */
+
 const SITE = {
   contactEmail: "amelierhew@gmail.com",
 
@@ -17,7 +27,7 @@ const FAIRS = [
     date: "",                       // TBD — fill in once confirmed
     dateNote: "Date to be announced",
     location: "Harlem, New York, NY",
-    image: "",
+    image: "assets/img/fairs/suny.jpg",
     partners: [
       "SUNY College of Optometry",
       "One Hundred Black Men of New York",
@@ -38,7 +48,7 @@ const FAIRS = [
     date: "",                       // TBD — fill in once confirmed
     dateNote: "Date to be announced",
     location: "Manhattan, New York, NY",
-    image: "",
+    image: "assets/img/fairs/columbia.jpg",
     partners: [
       "Columbia Ophthalmology",
       "More partners to be announced",
@@ -56,7 +66,7 @@ const FAIRS = [
     date: "2026-09-12",
     dateNote: "Saturday, September 12, 2026",
     location: "Arcadia, California",
-    image: "",
+    image: "assets/img/fairs/arcadia2026.jpg",
     partners: [
       "Kaiser Permanente",
       "USC Arcadia Hospital",
@@ -77,7 +87,7 @@ const FAIRS = [
     date: "2025-09-20",
     dateNote: "Saturday, September 20, 2025",
     location: "Arcadia, California",
-    image: "",
+    image: "assets/img/fairs/arcadia2025.jpg",
     partners: [
       "Keck Medicine of USC",
       "USC Arcadia Hospital",
@@ -103,7 +113,7 @@ const SPEAKERS = [
     position: "Physician; Mentor at Harvard Medical School",
     status: "past",
     date: "",
-    image: "",
+    image: "assets/img/speakers/gaurav.jpg",
     blurb: "",   // optional: 1–2 sentences on what the session covered
   },
   {
@@ -112,7 +122,7 @@ const SPEAKERS = [
     position: "OB/GYN; Director of Global Health at RWJBarnabas Health",
     status: "past",
     date: "",
-    image: "",
+    image: "assets/img/speakers/ernani.jpg",
     blurb: "",
   },
   {
@@ -122,7 +132,7 @@ const SPEAKERS = [
       "Hematology-Oncology Fellow at Memorial Sloan Kettering; CEO of Eviva Partners, a nonprofit closing care gaps in hematology-oncology",
     status: "past",
     date: "",
-    image: "",
+    image: "assets/img/speakers/alex.jpg",
     blurb: "",
   },
   {
@@ -131,7 +141,7 @@ const SPEAKERS = [
     position: "Co-founder and CEO of Deliver Biosciences",
     status: "upcoming",
     date: "",
-    image: "",
+    image: "assets/img/speakers/bakul.jpg",
     blurb: "",
   },
   {
@@ -140,7 +150,7 @@ const SPEAKERS = [
     position: "Founder and Executive Chairman of BioIntelliSense",
     status: "upcoming",
     date: "",
-    image: "",
+    image: "assets/img/speakers/mault.jpg",
     blurb: "",
   },
 ];
@@ -150,14 +160,14 @@ const SPEAKERS = [
    to the file path, e.g. logo: "assets/img/schools/stuyvesant.png".
    Leave `logo: ""` to show the school's name instead. */
 const SCHOOLS = [
-  { name: "Stuyvesant High School", location: "New York, NY", logo: "" },
-  { name: "Dwight-Englewood School", location: "Englewood, NJ", logo: "" },
-  { name: "Harvard-Westlake School", location: "Los Angeles, CA", logo: "" },
+  { name: "Stuyvesant High School", location: "New York, NY", logo: "assets/img/schools/stuyvesant.png" },
+  { name: "Dwight-Englewood School", location: "Englewood, NJ", logo: "assets/img/schools/dwight.png" },
+  { name: "Harvard-Westlake School", location: "Los Angeles, CA", logo: "assets/img/schools/harvardwest.png" },
 ];
 
 /* ---------- TEAM ---------- */
 const TEAM = [
-  { name: "Amelie Rhew", role: "Co-founder & Co-president", image: "", bio: "Add a short bio here." },
-  { name: "Nate Rhew", role: "Co-founder & Co-president", image: "", bio: "Add a short bio here." },
-  { name: "Ryan", role: "Vice President", image: "", bio: "Add a short bio here." },
+  { name: "Amelie Rhew", role: "Co-founder & Co-president", image: "assets/img/team/amelie.jpg", bio: "" },
+  { name: "Nate Rhew", role: "Co-founder & Co-president", image: "assets/img/team/nate.jpg", bio: "" },
+  { name: "Ryan", role: "Vice President", image: "assets/img/team/ryan.jpg", bio: "" },
 ];
