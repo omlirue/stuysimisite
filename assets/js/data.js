@@ -1,15 +1,5 @@
-/* =========================================================
-   StuySIMI — SITE CONTENT
-   This is the one file to edit when you add a fair, a speaker,
-   or a team bio. You don't need to touch any HTML.
-
-   Photos: put image files in assets/img/ and set `image` to the
-   file name, e.g. image: "assets/img/harlem-fair.jpg".
-   Leave `image: ""` to show the decorative placeholder instead.
-   ========================================================= */
-
 const SITE = {
-  contactEmail: "amelierhew@gmail.com",
+   contactEmail: "amelierhew@gmail.com",
 
   // MCAssist: once the app is deployed (e.g. at https://mcassist.vercel.app),
   // paste its URL here and it will appear embedded on the MCAssist page.
