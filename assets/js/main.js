@@ -1,3 +1,8 @@
+/* =========================================================
+   StuySIMI — shared header, footer, cards and pop-ups.
+   Content lives in data.js; you shouldn't need to edit this.
+   ========================================================= */
+
 const NAV = [
   { href: "index.html", label: "Home" },
   { href: "health-fairs.html", label: "Health Fairs" },
@@ -227,7 +232,7 @@ function renderTeam(targetId) {
       <div class="avatar">${m.image ? `<img src="${esc(m.image)}" alt="${esc(m.name)}">` : esc(initials(m.name))}</div>
       <h3>${esc(m.name)}</h3>
       <div class="role">${esc(m.role)}</div>
-      ${m.bio ? `<p class="bio">${esc(m.bio)}</p>` : ""}
+      <p class="bio">${esc(m.bio)}</p>
     </div>`
   ).join("");
 }
