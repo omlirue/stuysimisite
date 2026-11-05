@@ -1,5 +1,5 @@
 const SITE = {
-   contactEmail: "amelierhew@gmail.com",
+  contactEmail: "amelierhew@gmail.com",
 
   // MCAssist: once the app is deployed (e.g. at https://mcassist.vercel.app),
   // paste its URL here and it will appear embedded on the MCAssist page.
@@ -13,7 +13,7 @@ const SITE = {
 const FAIRS = [
   {
     id: "harlem",
-    name: "Harlem Community Health Fair",
+    name: "Health and Wellness Expo",
     date: "",                       // TBD — fill in once confirmed
     dateNote: "Date to be announced",
     location: "Harlem, New York, NY",
@@ -103,7 +103,7 @@ const SPEAKERS = [
     position: "Physician; Mentor at Harvard Medical School",
     status: "past",
     date: "",
-    image: "assets/img/speakers/gaurav.jpg",
+    image: "",
     blurb: "",   // optional: 1–2 sentences on what the session covered
   },
   {
@@ -112,7 +112,7 @@ const SPEAKERS = [
     position: "OB/GYN; Director of Global Health at RWJBarnabas Health",
     status: "past",
     date: "",
-    image: "assets/img/speakers/ernani.jpg",
+    image: "",
     blurb: "",
   },
   {
@@ -122,7 +122,7 @@ const SPEAKERS = [
       "Hematology-Oncology Fellow at Memorial Sloan Kettering; CEO of Eviva Partners, a nonprofit closing care gaps in hematology-oncology",
     status: "past",
     date: "",
-    image: "assets/img/speakers/alex.jpg",
+    image: "",
     blurb: "",
   },
   {
@@ -131,7 +131,7 @@ const SPEAKERS = [
     position: "Co-founder and CEO of Deliver Biosciences",
     status: "upcoming",
     date: "",
-    image: "assets/img/speakers/bakul.jpg",
+    image: "",
     blurb: "",
   },
   {
@@ -140,7 +140,7 @@ const SPEAKERS = [
     position: "Founder and Executive Chairman of BioIntelliSense",
     status: "upcoming",
     date: "",
-    image: "assets/img/speakers/mault.jpg",
+    image: "",
     blurb: "",
   },
 ];
@@ -150,14 +150,14 @@ const SPEAKERS = [
    to the file path, e.g. logo: "assets/img/schools/stuyvesant.png".
    Leave `logo: ""` to show the school's name instead. */
 const SCHOOLS = [
-  { name: "Stuyvesant High School", location: "New York, NY", logo: "assets/img/schools/stuyvesant.png" },
-  { name: "Dwight-Englewood School", location: "Englewood, NJ", logo: "assets/img/schools/dwight.png" },
-  { name: "Harvard-Westlake School", location: "Los Angeles, CA", logo: "assets/img/schools/harvardwest.png" },
+  { name: "Stuyvesant High School", location: "New York, NY", logo: "" },
+  { name: "Dwight-Englewood School", location: "Englewood, NJ", logo: "" },
+  { name: "Harvard-Westlake School", location: "Los Angeles, CA", logo: "" },
 ];
 
 /* ---------- TEAM ---------- */
 const TEAM = [
-  { name: "Amelie Rhew", role: "Co-founder & Co-president", image: "assets/img/team/amelie.jpg", bio: "" },
-  { name: "Nate Rhew", role: "Co-founder & Co-president", image: "assets/img/team/nate.jpg", bio: "" },
-  { name: "Ryan", role: "Vice President", image: "assets/img/team/ryan.jpg", bio: "" },
+  { name: "Amelie Rhew", role: "Co-founder & Co-president", image: "", bio: "Add a short bio here." },
+  { name: "Nate Rhew", role: "Co-founder & Co-president", image: "", bio: "Add a short bio here." },
+  { name: "Ryan", role: "Vice President", image: "", bio: "Add a short bio here." },
 ];
