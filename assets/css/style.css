@@ -321,4 +321,3 @@ dialog.modal::backdrop { background: rgba(30,30,30,.45); }
 .school-logo { height: 80px; max-width: 200px; }
 .schools { gap: 28px 64px; }
 @media (max-width: 600px) { .school-logo { height: 64px; } .schools { gap: 24px 36px; } }
-.home .cta-section { padding-top: 8px; }
