@@ -1,23 +1,13 @@
-/* =========================================================
-   StuySIMI — shared header, footer, cards and pop-ups.
-   Content lives in data.js; you shouldn't need to edit this.
-   ========================================================= */
-
 const NAV = [
   { href: "index.html", label: "Home" },
-  {
-    label: "Projects",
-    children: [
-      { href: "health-fairs.html", label: "Health Fairs" },
-      { href: "discussions.html", label: "Community Discussions" },
-      { href: "mcassist.html", label: "MCAssist" },
-    ],
-  },
+  { href: "health-fairs.html", label: "Health Fairs" },
+  { href: "discussions.html", label: "Discussions" },
+  { href: "projects.html", label: "Projects" },
   { href: "about.html", label: "About Us" },
-  { href: "resources.html", label: "For Schools" },
 ];
 
-const here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+let here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+if (here === "mcassist.html") here = "projects.html";
 const esc = (s = "") =>
   String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
@@ -72,8 +62,8 @@ function renderFooter() {
   el.innerHTML = `<div class="container footer-inner">
       <img src="assets/img/logo-cropped.png" alt="StuySIMI">
       <div class="footer-links">${flat.map((n) => `<a href="${n.href}">${n.label}</a>`).join("")}
-           <a href="${mailto("Hello from the StuySIMI website")}">Contact us</a></div>
-      <div>© ${new Date().getFullYear()} StuySIMI · New York City branch of SIMI</div>
+        <a href="${mailto("Hello from the StuySIMI website")}">Contact us</a></div>
+      <div>© ${new Date().getFullYear()} StuySIMI · Care that speaks your language</div>
     </div>`;
 }
 
@@ -237,7 +227,19 @@ function renderTeam(targetId) {
       <div class="avatar">${m.image ? `<img src="${esc(m.image)}" alt="${esc(m.name)}">` : esc(initials(m.name))}</div>
       <h3>${esc(m.name)}</h3>
       <div class="role">${esc(m.role)}</div>
-      <p class="bio">${esc(m.bio)}</p>
+      ${m.bio ? `<p class="bio">${esc(m.bio)}</p>` : ""}
+    </div>`
+  ).join("");
+}
+
+/* ---------- collaborating schools ---------- */
+function renderSchools(targetId) {
+  const el = document.getElementById(targetId);
+  if (!el) return;
+  el.innerHTML = SCHOOLS.map(
+    (s) => `<div class="school">
+      <div class="school-logo">${s.logo ? `<img src="${esc(s.logo)}" alt="${esc(s.name)} logo">` : `<span>${esc(s.name.replace(/\b(High|School)\b/g, "").split(/[\s-]+/).filter(Boolean).map((w) => w[0]).join(""))}</span>`}</div>
+      <div><div class="school-name">${esc(s.name)}</div><div class="school-loc">${esc(s.location)}</div></div>
     </div>`
   ).join("");
 }
@@ -260,5 +262,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderHeader();
   renderFooter();
   wireMailLinks();
-  renderStats();
+  renderSchools("schools");
 });
