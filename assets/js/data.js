@@ -35,16 +35,34 @@ const FAIRS = [
       "More partners to be announced",
     ],
     summary:
-      "StuySIMI's first New York health fair, bringing free screenings and preventive care directly to the Harlem community.",
+      "A community health fair bringing free screenings and preventive care directly into Harlem, where neighbors already live, gather, and feel at home.",
     details: [
-      "This fair marks the start of SIMI's community health fairs in New York City. Care comes to the neighborhood, and screenings are provided with no fees to attendees.",
-      "StuySIMI students support the fair through community outreach beforehand and follow-up calls afterward, so attendees are connected to the care they need. Students also help on-site when the schedule allows.",
+      "StuySIMI's first New York partnership, joining a fair led by local organizations. Care comes to the neighborhood, and screenings are provided at no cost to attendees.",
+      "StuySIMI students support the fair through community outreach beforehand and follow-up calls afterward, so attendees stay connected to the care they need. Students also help on-site when the fair's timing and location allow.",
     ],
-    studentRoles: ["Community outreach", "Follow-up calls & messages", "Day-of support (when schedules allow)"],
+    studentRoles: ["Outreach & resources", "On-site coordination & translation (depending on timing and location)", "Follow-up calls"],
+  },
+  {
+    id: "columbia",
+    name: "Columbia Ophthalmology Health Fair",
+    date: "",                       // TBD — fill in once confirmed
+    dateNote: "Date to be announced",
+    location: "Manhattan, New York, NY",
+    image: "",
+    partners: [
+      "Columbia Ophthalmology",
+      "More partners to be announced",
+    ],
+    summary:
+      "A community health fair in Manhattan focused on eye health, bringing free vision screenings and preventive care directly to the community.",
+    details: [
+      "StuySIMI students will support the fair through outreach beforehand and follow-up calls afterward, helping attendees stay connected to care. Students may also help on-site when the fair's timing and location allow.",
+    ],
+    studentRoles: ["Outreach & resources", "On-site coordination & translation (depending on timing and location)", "Follow-up calls"],
   },
   {
     id: "arcadia",
-    name: "The City of Arcadia Health Fair",
+    name: "The City of Arcadia Health Fair 2026",
     date: "2026-09-12",
     dateNote: "Saturday, September 12, 2026",
     location: "Arcadia, California",
@@ -57,9 +75,29 @@ const FAIRS = [
       "SIMI Group Inc.",
     ],
     summary:
-      "A community health fair in Arcadia, CA, part of SIMI's established network of fairs in California.",
+      "A community health fair in Arcadia, CA, bringing free preventive care to local residents through SIMI's partners in California.",
     details: [
-      "SIMI's fairs in Arcadia are where this work began. StuySIMI builds on these fairs remotely from New York while growing new partnerships at home.",
+      "SIMI's fairs in Arcadia are where StuySIMI's roots are. We continue to support them remotely from New York while building our own partnerships at home.",
+    ],
+    studentRoles: [],
+  },
+  {
+    id: "arcadia-2025",
+    name: "The City of Arcadia Health Fair 2025",
+    date: "2025-09-20",
+    dateNote: "Saturday, September 20, 2025",
+    location: "Arcadia, California",
+    image: "",
+    partners: [
+      "Keck Medicine of USC",
+      "USC Arcadia Hospital",
+      "Huntington Health, an affiliate of Cedars-Sinai",
+      "Kaiser Permanente",
+    ],
+    summary:
+      "The 2025 edition of Arcadia's community health fair, bringing free screenings and preventive care to local residents.",
+    details: [
+      "SIMI's work at the Arcadia fairs is where StuySIMI's roots are, and it continues to inform how we approach community care in New York.",
     ],
     studentRoles: [],
   },
@@ -75,7 +113,7 @@ const SPEAKERS = [
     position: "Physician; Mentor at Harvard Medical School",
     status: "past",
     date: "",
-    image: "",
+    image: "assets/img/speakers/gaurav.jpg",
     blurb: "",   // optional: 1–2 sentences on what the session covered
   },
   {
@@ -84,7 +122,7 @@ const SPEAKERS = [
     position: "OB/GYN; Director of Global Health at RWJBarnabas Health",
     status: "past",
     date: "",
-    image: "",
+    image: "assets/img/speakers/ernani.jpg",
     blurb: "",
   },
   {
@@ -94,7 +132,7 @@ const SPEAKERS = [
       "Hematology-Oncology Fellow at Memorial Sloan Kettering; CEO of Eviva Partners, a nonprofit closing care gaps in hematology-oncology",
     status: "past",
     date: "",
-    image: "",
+    image: "assets/img/speakers/alex.jpg",
     blurb: "",
   },
   {
@@ -103,7 +141,7 @@ const SPEAKERS = [
     position: "Co-founder and CEO of Deliver Biosciences",
     status: "upcoming",
     date: "",
-    image: "",
+    image: "assets/img/speakers/bakul.jpg",
     blurb: "",
   },
   {
@@ -112,14 +150,24 @@ const SPEAKERS = [
     position: "Founder and Executive Chairman of BioIntelliSense",
     status: "upcoming",
     date: "",
-    image: "",
+    image: "assets/img/speakers/mault.jpg",
     blurb: "",
   },
 ];
 
+/* ---------- COLLABORATING SCHOOLS ----------
+   Logos: put each school's logo in assets/img/schools/ and set `logo`
+   to the file path, e.g. logo: "assets/img/schools/stuyvesant.png".
+   Leave `logo: ""` to show the school's name instead. */
+const SCHOOLS = [
+  { name: "Stuyvesant High School", location: "New York, NY", logo: "assets/img/schools/stuyvesant.png" },
+  { name: "Dwight-Englewood School", location: "Englewood, NJ", logo: "assets/img/schools/dwight.png" },
+  { name: "Harvard-Westlake School", location: "Los Angeles, CA", logo: "assets/img/schools/harvardwest.png" },
+];
+
 /* ---------- TEAM ---------- */
 const TEAM = [
-  { name: "Amelie Rhew", role: "Co-founder & Co-president", image: "", bio: "Add a short bio here." },
-  { name: "Nate Rhew", role: "Co-founder & Co-president", image: "", bio: "Add a short bio here." },
-  { name: "Ryan Liang", role: "Vice President", image: "", bio: "Add a short bio here." },
+  { name: "Amelie Rhew", role: "Co-founder & Co-president", image: "assets/img/team/amelie.jpg", bio: "" },
+  { name: "Nate Rhew", role: "Co-founder & Co-president", image: "assets/img/team/nate.jpg", bio: "" },
+  { name: "Ryan", role: "Vice President", image: "assets/img/team/ryan.jpg", bio: "" },
 ];
