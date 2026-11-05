@@ -300,24 +300,12 @@ dialog.modal::backdrop { background: rgba(30,30,30,.45); }
 .purpose p { flex: 1; }
 .audience { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 
-/* ---------- Collaborating schools (small strip) ---------- */
-.schools-strip { padding: 48px 0 8px; }
-.schools-strip + * { margin-top: 0; }
-.schools-strip .eyebrow { text-align: center; margin-bottom: 20px; color: var(--muted); }
-.schools { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 28px 48px; }
-.school-logo { height: 56px; width: auto; max-width: 150px; object-fit: contain; }
-.school-fallback { font-family: var(--serif); font-weight: 600; color: var(--muted); font-size: .95rem; }
-.pillar-label { margin-top: 72px; padding-top: 40px; border-top: 1px solid #e0e0e0; }
-
-/* ---------- Home page: tighter spacing ---------- */
-.home .hero { padding: 64px 0 56px; }
-.home .hero img { margin-bottom: 20px !important; }
-.home .section { padding: 52px 0; }
-.home .pillar-label { margin-top: 48px; padding-top: 32px; }
-.home .schools-strip { padding: 36px 0 0; }
-.home .site-footer { margin-top: 48px; }
-
-/* logos: a bit larger */
-.school-logo { height: 80px; max-width: 200px; }
-.schools { gap: 28px 64px; }
-@media (max-width: 600px) { .school-logo { height: 64px; } .schools { gap: 24px 36px; } }
+/* ---------- Collaborating schools ---------- */
+.schools { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 28px; }
+.school { display: flex; align-items: center; gap: 16px; border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; background: #fff; }
+.school-logo { flex: none; width: 64px; height: 64px; display: grid; place-items: center; border-radius: 12px; background: var(--rose-tint); overflow: hidden; }
+.school-logo img { width: 100%; height: 100%; object-fit: contain; background: #fff; }
+.school-logo span { font-family: var(--serif); font-weight: 600; font-size: 1.3rem; color: var(--rose-dark); }
+.school-name { font-family: var(--serif); font-weight: 600; font-size: 1.05rem; line-height: 1.3; }
+.school-loc { color: var(--muted); font-size: .9rem; }
+.pillar-label { margin-top: 56px; }
