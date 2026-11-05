@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap");
 /* =========================================================
    StuySIMI — site styles
    Colors are taken straight from the StuySIMI logo.
@@ -298,3 +299,12 @@ dialog.modal::backdrop { background: rgba(30,30,30,.45); }
 }
 .purpose p { flex: 1; }
 .audience { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+/* ---------- Collaborating schools (small strip) ---------- */
+.schools-strip { padding: 48px 0 8px; }
+.schools-strip + * { margin-top: 0; }
+.schools-strip .eyebrow { text-align: center; margin-bottom: 20px; color: var(--muted); }
+.schools { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 28px 48px; }
+.school-logo { height: 56px; width: auto; max-width: 150px; object-fit: contain; }
+.school-fallback { font-family: var(--serif); font-weight: 600; color: var(--muted); font-size: .95rem; }
+.pillar-label { margin-top: 72px; padding-top: 40px; border-top: 1px solid #e0e0e0; }
